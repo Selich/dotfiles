@@ -4,8 +4,10 @@ syntax on
 filetype plugin indent on
 set noswapfile
 set nowritebackup
+set mouse:a
 set hidden
 set number
+set nowrap
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
@@ -35,15 +37,28 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 let g:coc_global_extensions = [
    \ 'coc-snippets',
    \ 'coc-pairs',
+   \ 'coc-webpack',
    \ 'coc-tsserver',
+   \ 'coc-solidity',
    \ 'coc-eslint',
+   \ 'coc-rust-analyzer',
+   \ 'coc-css',
+   \ 'coc-jest',
    \ 'coc-prettier', 
    \ 'coc-json', 
    \ 'coc-clangd', 
    \ 'coc-rls', 
    \ 'coc-go', 
    \ 'coc-lists', 
+   \ 'coc-cmake', 
+   \ 'coc-docker', 
+   \ 'coc-react-refactor',
+   \ 'coc-github',
    \ ]
+" https://www.npmjs.com/package/coc-react-refactor
+" https://www.npmjs.com/package/coc-coverage
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 nnoremap <silent> K :call CocAction('doHover')<CR>
 
